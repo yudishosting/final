@@ -1,0 +1,194 @@
+{
+  "playlistName": "𝗣𝗟𝗔𝗬𝗟𝗜𝗦𝗧 𝗙𝗔𝗩𝗢𝗥𝗜𝗧",
+  "playlist": [
+  {
+      "artist": "Maul Ibrahim",
+      "title": "33x - Perunggu",
+      "path": "music/randomm/33x.mp3",
+      "lyricsPath": "lyrics/randomm/33x.js",
+      "albumArt": "/images/random/33x.jpeg"
+    },
+    {
+      "artist": "James Arthur",
+      "title": "Can i Be him",
+      "path": "music/random/behim.mp3",
+      "lyricsPath": "lyrics/random/behim.js",
+      "albumArt": "/images/random/behim.jpeg"
+    },
+    {
+      "artist": "Kendis",
+      "title": "ours to keep",
+      "path": "music/random/keep.mp3",
+      "lyricsPath": "lyrics/random/keep.js",
+      "albumArt": "/images/random/keep.jpeg"
+    },
+    {
+      "artist": "James Arthur",
+      "title": "Car's Out Side",
+      "path": "music/random/outside.mp3",
+      "lyricsPath": "lyrics/random/outside.js",
+      "albumArt": "/images/random/outside.jpeg"
+    },
+    {
+      "artist": "Khifnu",
+      "title": "Merindumu ",
+      "path": "music/randomm/merindumu.mp3",
+      "lyricsPath": "lyrics/randomm/merindumu.js",
+      "albumArt": "/images/random/merindumu.jpg"
+    },
+    {
+      "artist": "Lady smile",
+      "title": "die with a smile",
+      "path": "music/random/diewith.mp3",
+      "lyricsPath": "lyrics/random/diewith.js",
+      "albumArt": "/images/random/diewith.jpg"
+    },
+    {
+      "artist": "Taylor Swift",
+      "title": "Message in a bottle",
+      "path": "music/random/botle.mp3",
+      "lyricsPath": "lyrics/random/botle.js",
+      "albumArt": "/images/random/botle.jpg"
+    },
+    {
+      "artist": "Matty Healy",
+      "title": "About You",
+      "path": "music/random/aboutyou.mp3",
+      "lyricsPath": "lyrics/random/aboutyou.js",
+      "albumArt": "/images/random/about.jpg"
+    },
+    {
+      "artist": "Dougy Mandagi",
+      "title": "Sweet disposition",
+      "path": "music/random/disposition.mp3",
+      "lyricsPath": "lyrics/random/disposition.js",
+      "albumArt": "/images/random/sweet.jpg"
+    },
+    {
+      "artist": "One direction",
+      "title": "where we are",
+      "path": "music/random/weare.mp3",
+      "lyricsPath": "lyrics/random/weare.js",
+      "albumArt": "/images/random/weare.jpeg"
+    },
+    {
+      "artist": "Gigi Perez",
+      "title": "Sailor Song",
+      "path": "music/random/sailor.mp3",
+      "lyricsPath": "lyrics/random/sailor.js",
+      "albumArt": "/images/random/sailor.jpg"
+    },
+    {
+      "artist": "Sombr",
+      "title": "Back To Friend",
+      "path": "music/random/friends.mp3",
+      "lyricsPath": "lyrics/random/friends.js",
+      "albumArt": "/images/random/friends.jpg"
+    },
+    {
+      "artist": "Nadhif Basalamah",
+      "title": "Bergema Sampai Selamanya",
+      "path": "music/randomm/bergema.mp3",
+      "lyricsPath": "lyrics/randomm/bergema.js",
+      "albumArt": "/images/random/bergema.jpg"
+    },
+    {
+      "artist": "Nadhif Basalamah",
+      "title": "Penjaga Hati",
+      "path": "music/randomm/penjagahati.mp3",
+      "lyricsPath": "lyrics/randomm/penjagahati.js",
+      "albumArt": "/images/random/penjagahati.jpg"
+    },
+    {
+      "artist": "Aris Lesmana",
+      "title": "Mangu",
+      "path": "music/randomm/mangu.mp3",
+      "lyricsPath": "lyrics/randomm/mangu.js",
+      "albumArt": "/images/random/mangu.jpg"
+    },
+    {
+      "artist": "Hindia",
+      "title": "Everything U Are",
+      "path": "music/hindia/everything.mp3",
+      "lyricsPath": "lyrics/hindia/everything.js",
+      "albumArt": "/images/hindia/everything.jpg"
+    },
+    {
+      "artist": "Hindia",
+      "title": "Ramai Sepi Bersama",
+      "path": "music/hindia/bersama.mp3",
+      "lyricsPath": "lyrics/hindia/bersama.js",
+      "albumArt": "/images/hindia/bersama.jpg"
+    },
+    {
+      "artist": "Hindia",
+      "title": "Semua Lagu Cinta Terdengar Sama",
+      "path": "music/hindia/sama.mp3",
+      "lyricsPath": "lyrics/hindia/sama.js",
+      "albumArt": "/images/hindia/sama.jpg"
+    },
+    {
+      "artist": "Hindia",
+      "title": "Rumah ke rumah",
+      "path": "music/hindia/rumah.mp3",
+      "lyricsPath": "lyrics/hindia/rumah.js",
+      "albumArt": "/images/hindia/rumah.jpg"
+    },
+    {
+      "artist": "Hindia",
+      "title": "Evaluasi",
+      "path": "music/hindia/evaluasi.mp3",
+      "lyricsPath": "lyrics/hindia/evaluasi.js",
+      "albumArt": "/images/hindia/evaluasi.jpg"
+    },
+    {
+      "artist": "Hindia",
+      "title": "Cincin",
+      "path": "music/hindia/cincin.mp3",
+      "lyricsPath": "lyrics/hindia/cincin.js",
+      "albumArt": "/images/hindia/cincin.jpg"
+    },
+    {
+      "artist": "Hindia",
+      "title": "Kita Kesana",
+      "path": "music/hindia/kitakesana.mp3",
+      "lyricsPath": "lyrics/hindia/kitakesana.js",
+      "albumArt": "/images/hindia/kitakesana.jpg"
+    },
+    {
+      "artist": "Hindia",
+      "title": "Rasakan Nikmatnya Hidup",
+      "path": "music/hindia/nikmatnya.mp3",
+      "lyricsPath": "lyrics/hindia/nikmatnya.js",
+      "albumArt": "/images/hindia/nikmatnya.jpg"
+    },
+    {
+      "artist": "Feast",
+      "title": "Feast",
+      "path": "music/nina/feast.mp3",
+      "lyricsPath": "lyrics/nina/feast.js",
+      "albumArt": "/images/nina/feast.jpg"
+    },
+    {
+      "artist": "Feast",
+      "title": "Tarot",
+      "path": "music/nina/tarot.mp3",
+      "lyricsPath": "lyrics/nina/tarot.js",
+      "albumArt": "/images/nina/tarot.jpg"
+    },
+    {
+      "artist": "Feast",
+      "title": "o,Tuan",
+      "path": "music/nina/otuan.mp3",
+      "lyricsPath": "lyrics/nina/otuan.js",
+      "albumArt": "/images/nina/otuan.jpg"
+    },
+    {
+      "artist": "coldplay",
+      "title": "a sky off the stars",
+      "path": "music/random/coldplay.mp3",
+      "lyricsPath": "lyrics/random/coldplay.js",
+      "albumArt": "/images/random/coldplay.jpeg"
+    }
+  ]
+}
