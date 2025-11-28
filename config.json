@@ -8,6 +8,20 @@
       "lyricsPath": "lyrics/randomm/33x.js",
       "albumArt": "/images/random/33x.jpeg"
     },
+     {
+      "artist": "Bernadya",
+      "title": "kini mereka tahu",
+      "path": "music/randomm/bernadyakini.mp3",
+      "lyricsPath": "lyrics/randomm/bernadyakini.js",
+      "albumArt": "/images/random/bernadyakini.jpg"
+    },
+        {
+      "artist": "Bernadya",
+      "title": "kata mereka ini berlebihann",
+      "path": "music/randomm/katabernadya.mp3",
+      "lyricsPath": "lyrics/randomm/katabernadya.js",
+      "albumArt": "/images/random/katabernadya.jpg"
+    },
     {
       "artist": "James Arthur",
       "title": "Can i Be him",
@@ -191,4 +205,6 @@
       "albumArt": "/images/random/coldplay.jpeg"
     }
   ]
+
 }
+

@@ -2,17 +2,19 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Music Player</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-    <!-- Canvas untuk background Scorpio -->
     <canvas id="backgroundCanvas"></canvas>
     
-    <!-- Background blur dari album art -->
     <div class="background-blur" id="backgroundBlur"></div>
+    <div class="background-blur" id="backgroundBlur2"></div>
     
     <div class="welcome-panel" id="welcomePanel">
         <div class="welcome-content">
@@ -21,10 +23,18 @@
             <button id="startButton">Mulai Mendengarkan</button>
         </div>
     </div>
+
+    <header class="main-header">
+        <h1 class="header-title">Now Playing</h1>
+    </header>
+    
+    <div class="playlist-panel" id="playlistPanel">
+        <h3>Daftar Lagu</h3>
+        <div id="songList" class="song-list"></div>
+    </div>
+    <div class="playlist-backdrop" id="playlistBackdrop"></div>
     
     <div class="player-container">
-        <h1 id="playlistTitle" class="playlist-title">Playlist</h1>
-        
         <div class="album-art">
             <img id="albumArt" src="placeholder.jpg" alt="Album Art">
         </div>
@@ -47,8 +57,8 @@
             <button id="nextBtn" class="control-btn">
                 <i class="fas fa-forward"></i>
             </button>
-            <button id="playlistToggleBtn" class="control-btn" title="Pilih Lagu">
-                <i class="fas fa-list"></i>
+            <button id="playlistToggleBtn" class="control-btn" title="Jelajahi Musik">
+                <i class="fas fa-list-ul"></i>
             </button>
         </div>
         
@@ -62,12 +72,6 @@
             <p id="currentLyric" class="active-lyric"></p>
             <p id="nextLyric" class="upcoming-lyric"></p>
             <p id="futureLyric" class="upcoming-lyric"></p>
-        </div>
-
-        <div class="playlist-panel hidden" id="playlistPanel">
-            <h3>Daftar Lagu</h3>
-            <div id="songList" class="song-list">
-            </div>
         </div>
     </div>
     
