@@ -8,19 +8,26 @@
       "lyricsPath": "lyrics/randomm/33x.js",
       "albumArt": "/images/random/33x.jpeg"
     },
-     {
-      "artist": "Bernadya",
-      "title": "kini mereka tahu",
-      "path": "music/randomm/bernadyakini.mp3",
-      "lyricsPath": "lyrics/randomm/bernadyakini.js",
-      "albumArt": "/images/random/bernadyakini.jpg"
-    },
-        {
+    {
       "artist": "Bernadya",
       "title": "kata mereka ini berlebihann",
       "path": "music/randomm/katabernadya.mp3",
-      "lyricsPath": "lyrics/randomm/katabernadya.js",
+      "lyricsPath": "lyrics/randomm/katabernadya1.js",
       "albumArt": "/images/random/katabernadya.jpg"
+    },
+    {
+      "artist": "idgitaf",
+      "title": "Sedia Aku Sebelum Hujan",
+      "path": "music/randomm/sebelumhujan.mp3",
+      "lyricsPath": "lyrics/randomm/sebelumhujan.js",
+      "albumArt": "/images/random/sebelumhujan.jpg"
+        },
+        {
+      "artist": "Sal",
+      "title": "Kita Usahakan Rumah Itu",
+      "path": "music/randomm/usahakanrumah.mp3",
+      "lyricsPath": "lyrics/randomm/usahakanrumah.js",
+      "albumArt": "/images/random/usahakanrumah.jpg"
     },
     {
       "artist": "James Arthur",
