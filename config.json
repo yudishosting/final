@@ -65,13 +65,6 @@
       "albumArt": "/images/random/penjagahati.jpg"
     },
     {
-      "artist": "Aris Lesmana",
-      "title": "Mangu",
-      "path": "music/randomm/mangu.mp3",
-      "lyricsPath": "lyrics/randomm/mangu.js",
-      "albumArt": "/images/random/mangu.jpg"
-    },
-    {
       "artist": "Hindia",
       "title": "Everything U Are",
       "path": "music/hindia/everything.mp3",
