@@ -44,6 +44,13 @@
       "albumArt": "/images/random/bertaut.jpeg"
     },
     {
+      "artist": "Done Maulana",
+      "title": "Daur Hidup",
+      "path": "music/randomm/daurhidup.mp3",
+      "lyricsPath": "lyrics/randomm/daurhidup.js",
+      "albumArt": "/images/random/daurhidup.jpeg"
+    },
+    {
       "artist": "Sal",
       "title": "Mesraanya Kecilan dulu",
       "path": "music/randomm/mesra-mesranya-kecil-kecilan.mp3",
