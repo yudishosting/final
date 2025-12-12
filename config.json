@@ -51,6 +51,13 @@
       "albumArt": "/images/random/daurhidup.jpeg"
     },
     {
+      "artist": "Barsena Bestandhi",
+      "title": "Ruang Baru",
+      "path": "music/randomm/ruangbaru.mp3",
+      "lyricsPath": "lyrics/randomm/ruangbaru.js",
+      "albumArt": "/images/random/ruangbaru.jpeg"
+    },
+    {
       "artist": "Sal",
       "title": "Mesraanya Kecilan dulu",
       "path": "music/randomm/mesra-mesranya-kecil-kecilan.mp3",
