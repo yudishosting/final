@@ -22,7 +22,7 @@ class MusicPlayer {
         this.nextLyric = document.getElementById('nextLyric');
         this.futureLyric = document.getElementById('futureLyric');
         this.headerTitle = document.querySelector('.header-title');
-        this.playlistTitle = document.querySelector('.playlist-panel h3');
+        this.playlistTitle = document.querySelector('.playlist-header h3');
 
         this.currentSongIndex = 0;
         this.isPlaying = false;
@@ -40,7 +40,8 @@ class MusicPlayer {
         await this.loadConfig();
         this.setupEventListeners();
         if (this.playlist.length > 0) {
-            this.currentSongIndex = Math.floor(Math.random() * this.playlist.length);
+            // Mulai dari lagu pertama (tidak random)
+            this.currentSongIndex = 0;
             this.loadSong(this.currentSongIndex);
             this.renderPlaylist();
             this.bgBlur1.style.backgroundImage = `url(${this.playlist[this.currentSongIndex].albumArt})`;
