@@ -25,8 +25,95 @@
     </div>
 
     <header class="main-header">
+        <button id="menuBtn" class="menu-btn" title="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
         <h1 class="header-title">Now Playing</h1>
+        <div class="header-spacer"></div>
     </header>
+
+    <!-- Menu Sidebar -->
+    <div class="menu-panel" id="menuPanel">
+        <div class="menu-header">
+            <h3>Menu</h3>
+            <button id="closeMenuBtn" class="close-menu-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="menu-content">
+            <div class="menu-item" id="sleepTimerMenuItem">
+                <i class="fas fa-clock"></i>
+                <span>Sleep Timer</span>
+            </div>
+            <div class="menu-item" id="aboutMenuItem">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sleep Timer Modal -->
+    <div class="modal" id="sleepTimerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Sleep Timer</h3>
+                <button class="modal-close" id="closeSleepTimer">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">Musik akan berhenti otomatis setelah waktu yang dipilih</p>
+                <div class="timer-options">
+                    <button class="timer-btn" data-minutes="5">5 Menit</button>
+                    <button class="timer-btn" data-minutes="15">15 Menit</button>
+                    <button class="timer-btn" data-minutes="30">30 Menit</button>
+                    <button class="timer-btn" data-minutes="60">60 Menit</button>
+                </div>
+                <div class="custom-timer">
+                    <label for="customMinutes">Custom (Menit):</label>
+                    <div class="custom-timer-input">
+                        <input type="number" id="customMinutes" min="1" max="180" placeholder="Masukkan menit">
+                        <button id="setCustomTimer" class="btn-set-custom">Set</button>
+                    </div>
+                </div>
+                <div class="timer-status" id="timerStatus"></div>
+                <button id="cancelTimer" class="btn-cancel-timer" style="display: none;">Batalkan Timer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="modal" id="aboutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>About Developer</h3>
+                <button class="modal-close" id="closeAbout">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body about-content">
+                <div class="developer-intro">
+                    <h4>Riskiyan Benta Yudistira</h4>
+                    <p class="dev-title">Passionate Developer & Code Enthusiast</p>
+                </div>
+                <div class="about-text">
+                    <p>Halo! Saya Riskiyan Benta Yudistira, seorang developer yang sangat mencintai dunia programming dan coding. Bagi saya, coding bukan hanya sekadar menulis baris kode, tetapi sebuah seni menciptakan solusi dari masalah yang kompleks.</p>
+                    
+                    <p>Setiap bug adalah puzzle yang menantang untuk dipecahkan, setiap error adalah pelajaran berharga, dan setiap project yang berhasil adalah karya seni digital yang membawa kepuasan tersendiri. Saya percaya bahwa kode yang baik tidak hanya berfungsi dengan sempurna, tetapi juga elegan dan mudah dipahami.</p>
+                    
+                    <p>Dalam perjalanan coding saya, saya belajar bahwa debugging adalah 90% dari pekerjaan seorang programmer, dan 10% sisanya adalah menulis kode yang akan di-debug nanti. Tapi itulah keindahannya - setiap tantangan membuat kita tumbuh lebih baik.</p>
+                    
+                    <p>Music player ini adalah salah satu wujud dari passion saya dalam mengkombinasikan teknologi dengan kreativitas. Dari desain UI yang minimalis hingga pengalaman pengguna yang smooth, semuanya dirancang dengan penuh dedikasi dan cinta terhadap coding.</p>
+                    
+                    <p class="quote">"Code is like humor. When you have to explain it, it's bad." - Cory House</p>
+                    
+                    <p>Terus belajar, terus berkembang, dan jangan pernah berhenti untuk berkarya. Happy coding! 🚀💻</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-backdrop" id="menuBackdrop"></div>
     
     <div class="playlist-panel" id="playlistPanel">
         <div class="playlist-header">

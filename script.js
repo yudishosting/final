@@ -24,6 +24,27 @@ class MusicPlayer {
         this.headerTitle = document.querySelector('.header-title');
         this.playlistTitle = document.querySelector('.playlist-header h3');
 
+        // Menu elements
+        this.menuBtn = document.getElementById('menuBtn');
+        this.menuPanel = document.getElementById('menuPanel');
+        this.menuBackdrop = document.getElementById('menuBackdrop');
+        this.closeMenuBtn = document.getElementById('closeMenuBtn');
+
+        // Sleep Timer elements
+        this.sleepTimerMenuItem = document.getElementById('sleepTimerMenuItem');
+        this.sleepTimerModal = document.getElementById('sleepTimerModal');
+        this.closeSleepTimer = document.getElementById('closeSleepTimer');
+        this.timerButtons = document.querySelectorAll('.timer-btn');
+        this.customMinutesInput = document.getElementById('customMinutes');
+        this.setCustomTimerBtn = document.getElementById('setCustomTimer');
+        this.timerStatus = document.getElementById('timerStatus');
+        this.cancelTimerBtn = document.getElementById('cancelTimer');
+
+        // About elements
+        this.aboutMenuItem = document.getElementById('aboutMenuItem');
+        this.aboutModal = document.getElementById('aboutModal');
+        this.closeAbout = document.getElementById('closeAbout');
+
         this.currentSongIndex = 0;
         this.isPlaying = false;
         this.originalPlaylist = [];
@@ -32,6 +53,11 @@ class MusicPlayer {
         this.lyrics = [];
         this.currentLyricIndex = 0;
         this.audio.volume = 1;
+        
+        // Sleep timer variables
+        this.sleepTimerTimeout = null;
+        this.sleepTimerEndTime = null;
+        this.sleepTimerInterval = null;
 
         this.init();
     }
@@ -40,7 +66,6 @@ class MusicPlayer {
         await this.loadConfig();
         this.setupEventListeners();
         if (this.playlist.length > 0) {
-            // Mulai dari lagu pertama (tidak random)
             this.currentSongIndex = 0;
             this.loadSong(this.currentSongIndex);
             this.renderPlaylist();
@@ -75,6 +100,50 @@ class MusicPlayer {
         this.playlistToggleBtn.addEventListener('click', () => this.togglePlaylistPanel());
         this.playlistBackdrop.addEventListener('click', () => this.togglePlaylistPanel());
 
+        // Menu event listeners
+        this.menuBtn.addEventListener('click', () => this.toggleMenu());
+        this.closeMenuBtn.addEventListener('click', () => this.toggleMenu());
+        this.menuBackdrop.addEventListener('click', () => this.toggleMenu());
+
+        // Sleep Timer event listeners
+        this.sleepTimerMenuItem.addEventListener('click', () => {
+            this.toggleMenu();
+            this.openSleepTimer();
+        });
+        this.closeSleepTimer.addEventListener('click', () => this.closeSleepTimerModal());
+        this.sleepTimerModal.addEventListener('click', (e) => {
+            if (e.target === this.sleepTimerModal) this.closeSleepTimerModal();
+        });
+
+        this.timerButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const minutes = parseInt(btn.dataset.minutes);
+                this.setSleepTimer(minutes);
+            });
+        });
+
+        this.setCustomTimerBtn.addEventListener('click', () => {
+            const minutes = parseInt(this.customMinutesInput.value);
+            if (minutes && minutes > 0 && minutes <= 180) {
+                this.setSleepTimer(minutes);
+                this.customMinutesInput.value = '';
+            } else {
+                alert('Masukkan waktu antara 1-180 menit');
+            }
+        });
+
+        this.cancelTimerBtn.addEventListener('click', () => this.cancelSleepTimer());
+
+        // About event listeners
+        this.aboutMenuItem.addEventListener('click', () => {
+            this.toggleMenu();
+            this.openAbout();
+        });
+        this.closeAbout.addEventListener('click', () => this.closeAboutModal());
+        this.aboutModal.addEventListener('click', (e) => {
+            if (e.target === this.aboutModal) this.closeAboutModal();
+        });
+
         this.audio.addEventListener('timeupdate', () => this.updateProgress());
         this.audio.addEventListener('loadedmetadata', () => this.updateDuration());
         this.audio.addEventListener('ended', () => this.handleSongEnd());
@@ -105,6 +174,83 @@ class MusicPlayer {
                 }
             }
         }, { once: true });
+    }
+
+    // Menu methods
+    toggleMenu() {
+        this.menuPanel.classList.toggle('active');
+        this.menuBackdrop.classList.toggle('active');
+    }
+
+    // Sleep Timer methods
+    openSleepTimer() {
+        this.sleepTimerModal.classList.add('active');
+    }
+
+    closeSleepTimerModal() {
+        this.sleepTimerModal.classList.remove('active');
+    }
+
+    setSleepTimer(minutes) {
+        this.cancelSleepTimer();
+        
+        const milliseconds = minutes * 60 * 1000;
+        this.sleepTimerEndTime = Date.now() + milliseconds;
+        
+        this.sleepTimerTimeout = setTimeout(() => {
+            this.audio.pause();
+            this.isPlaying = false;
+            this.playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+            this.timerStatus.textContent = 'Sleep timer selesai - Musik dihentikan';
+            this.cancelTimerBtn.style.display = 'none';
+            
+            setTimeout(() => {
+                this.timerStatus.classList.remove('active');
+            }, 5000);
+        }, milliseconds);
+
+        this.updateTimerDisplay();
+        this.sleepTimerInterval = setInterval(() => this.updateTimerDisplay(), 1000);
+        
+        this.timerStatus.classList.add('active');
+        this.cancelTimerBtn.style.display = 'block';
+    }
+
+    updateTimerDisplay() {
+        if (!this.sleepTimerEndTime) return;
+        
+        const remaining = this.sleepTimerEndTime - Date.now();
+        if (remaining <= 0) {
+            this.cancelSleepTimer();
+            return;
+        }
+
+        const minutes = Math.floor(remaining / 60000);
+        const seconds = Math.floor((remaining % 60000) / 1000);
+        this.timerStatus.textContent = `Sleep timer aktif: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    cancelSleepTimer() {
+        if (this.sleepTimerTimeout) {
+            clearTimeout(this.sleepTimerTimeout);
+            this.sleepTimerTimeout = null;
+        }
+        if (this.sleepTimerInterval) {
+            clearInterval(this.sleepTimerInterval);
+            this.sleepTimerInterval = null;
+        }
+        this.sleepTimerEndTime = null;
+        this.timerStatus.classList.remove('active');
+        this.cancelTimerBtn.style.display = 'none';
+    }
+
+    // About methods
+    openAbout() {
+        this.aboutModal.classList.add('active');
+    }
+
+    closeAboutModal() {
+        this.aboutModal.classList.remove('active');
     }
 
     toggleShuffle() {
@@ -196,7 +342,6 @@ class MusicPlayer {
             this.headerTitle.textContent = title;
         }
 
-        // Smooth background transition
         if (this.activeBlur === 1) {
             this.bgBlur2.style.backgroundImage = `url(${albumArt})`;
             this.bgBlur2.classList.add('active');
@@ -209,7 +354,6 @@ class MusicPlayer {
             this.activeBlur = 1;
         }
 
-        // Reset lyrics
         this.lyrics = [];
         this.currentLyricIndex = 0;
         this.currentLyric.textContent = 'Memuat lirik...';
@@ -218,7 +362,6 @@ class MusicPlayer {
 
         this.renderPlaylist();
 
-        // Load lyrics
         this.loadLyrics(lyricsPath).catch(err => {
             console.error('loadLyrics error:', err);
             this.currentLyric.textContent = 'Lirik tidak tersedia.';
@@ -280,7 +423,6 @@ class MusicPlayer {
                 document.body.appendChild(script);
             });
         } else {
-            // LRC format
             try {
                 const response = await fetch(lyricsPath);
                 const lrcText = await response.text();
