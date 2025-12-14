@@ -456,20 +456,44 @@ body {
     border-color: rgba(244, 67, 54, 0.5);
 }
 
-/* About Styles */
-.about-content {
-    color: #ddd;
+/* About Modal Styles */
+.about-modal-content {
+    max-width: 650px;
+    position: relative;
+    overflow-y: auto;
+    background: rgba(25, 25, 30, 0.95);
+    max-height: 90vh;
 }
 
-.developer-intro {
+.about-background-overlay {
+    display: none !important;
+}
+
+.developer-profile {
     text-align: center;
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+    margin-bottom: 30px;
+    padding: 20px;
+    position: relative;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(138, 43, 226, 0.5);
+    box-shadow: 0 5px 20px rgba(138, 43, 226, 0.3);
 }
 
 .developer-intro h4 {
-    font-size: 22px;
+    font-size: 28px;
     margin-bottom: 8px;
     background: linear-gradient(90deg, #8A2BE2, #FF007F);
     -webkit-background-clip: text;
@@ -477,26 +501,310 @@ body {
 }
 
 .dev-title {
-    color: #8A2BE2;
-    font-size: 14px;
+    color: #aaa;
+    font-size: 15px;
     font-style: italic;
+    margin-bottom: 15px;
+}
+
+.dev-badges {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(138, 43, 226, 0.15);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-radius: 20px;
+    font-size: 12px;
+    color: #8A2BE2;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background: rgba(138, 43, 226, 0.25);
+    transform: translateY(-2px);
+}
+
+.badge i {
+    font-size: 13px;
+}
+
+/* Enhanced text styling */
+.intro-text {
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+.highlight {
+    color: #6C63FF;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #1a1a2e, #6C63FF, #1a1a2e, transparent);
+    background-size: 200% 100%;
+    animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.section-divider {
+    position: relative;
+    text-align: center;
+    margin: 25px 0 20px;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.5), transparent);
+}
+
+.section-divider::before {
+    left: 0;
+}
+
+.section-divider::after {
+    right: 0;
+}
+
+.divider-text {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(25, 25, 30, 0.95);
+    color: #8A2BE2;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 20px;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+/* Quote styling */
+.quote {
+    background: rgba(108, 99, 255, 0.1);
+    border-left: 4px solid #6C63FF;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    position: relative;
+}
+
+.quote-icon {
+    color: #6C63FF;
+    font-size: 1.5rem;
+    opacity: 0.3;
+    margin-bottom: 0.5rem;
+}
+
+.quote p {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.quote-author {
+    display: block;
+    text-align: right;
+    color: #6C63FF;
+    font-weight: 600;
+    margin-top: 0.5rem;
 }
 
 .about-text p {
     margin-bottom: 15px;
-    line-height: 1.7;
+    line-height: 1.8;
     font-size: 14px;
     text-align: justify;
+    color: #ccc;
 }
 
-.about-text .quote {
-    background: rgba(138, 43, 226, 0.1);
-    border-left: 3px solid #8A2BE2;
-    padding: 15px;
-    margin: 20px 0;
-    font-style: italic;
-    color: #aaa;
-    border-radius: 5px;
+/* Tech Tags - Semua bahasa pemrograman */
+.tech-section {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    border: 1px solid rgba(138, 43, 226, 0.1);
+}
+
+.tech-section h6 {
+    color: #8A2BE2;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(20, 20, 25, 0.6);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    background: rgba(20, 20, 25, 0.8);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.tech-item i,
+.tech-item svg {
+    font-size: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.tech-item span {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Warna untuk setiap teknologi */
+.tech-item.js i { color: #f7df1e; }
+.tech-item.nextjs svg { fill: #ffffff; }
+.tech-item.python i { color: #3776ab; }
+.tech-item.react i { color: #61dafb; }
+.tech-item.nodejs i { color: #339933; }
+.tech-item.html i { color: #e34f26; }
+.tech-item.css i { color: #1572b6; }
+.tech-item.git i { color: #f05032; }
+.tech-item.github i { color: #ffffff; }
+.tech-item.mongodb i { color: #47a248; }
+.tech-item.mysql i { color: #4479a1; }
+
+/* Connect text */
+.connect-text {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Enhanced social links */
+.about-content .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(138, 43, 226, 0.2);
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    min-width: 90px;
+}
+
+.social-btn i {
+    font-size: 1.8rem;
+}
+
+.social-btn span {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.social-btn.whatsapp {
+    background: rgba(37, 211, 102, 0.1);
+    color: #25d366;
+    border-color: rgba(37, 211, 102, 0.3);
+}
+
+.social-btn.whatsapp:hover {
+    background: rgba(37, 211, 102, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+}
+
+.social-btn.instagram {
+    background: rgba(225, 48, 108, 0.1);
+    color: #E1306C;
+    border-color: rgba(225, 48, 108, 0.3);
+}
+
+.social-btn.instagram:hover {
+    background: rgba(225, 48, 108, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(225, 48, 108, 0.3);
+}
+
+.social-btn.github {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.social-btn.github:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+}
+
+.social-btn.linkedin {
+    background: rgba(10, 102, 194, 0.1);
+    color: #0a66c2;
+    border-color: rgba(10, 102, 194, 0.3);
+}
+
+.social-btn.linkedin:hover {
+    background: rgba(10, 102, 194, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(10, 102, 194, 0.3);
 }
 
 /* Custom Scrollbar untuk Modal */
@@ -511,6 +819,25 @@ body {
 .modal-content::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, #8A2BE2, #FF007F);
     border-radius: 10px;
+}
+
+/* Custom Scrollbar untuk About Modal */
+.about-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.about-modal-content::-webkit-scrollbar-track {
+    background: rgba(138, 43, 226, 0.05);
+    border-radius: 10px;
+}
+
+.about-modal-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #8A2BE2, #FF007F);
+    border-radius: 10px;
+}
+
+.about-modal-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #9A3BF2, #FF1F8F);
 }
 
 /* Player Container */
@@ -698,51 +1025,6 @@ body {
     opacity: 0.4;
 }
 
-/* Social Links */
-.social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid rgba(138, 43, 226, 0.2);
-}
-
-.social-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.social-btn.whatsapp {
-    background: linear-gradient(135deg, #25D366, #128C7E);
-}
-
-.social-btn.whatsapp:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
-    border-color: rgba(37, 211, 102, 0.3);
-}
-
-.social-btn.instagram {
-    background: linear-gradient(135deg, #E1306C, #C13584, #833AB4);
-}
-
-.social-btn.instagram:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(225, 48, 108, 0.5);
-    border-color: rgba(225, 48, 108, 0.3);
-}
-
 /* Playlist Panel */
 .playlist-panel {
     position: fixed;
@@ -904,4 +1186,50 @@ body {
     .menu-panel {
         width: min(280px, 90vw);
     }
-}
+
+    .about-modal-content {
+        max-width: 95%;
+    }
+
+    .profile-image-container {
+        width: 120px;
+        height: 120px;
+    }
+
+    .developer-intro h4 {
+        font-size: 24px;
+    }
+
+    .social-btn {
+        min-width: 80px;
+        padding: 0.9rem 1rem;
+    }
+
+    .social-btn i {
+        font-size: 1.5rem;
+    }
+
+    .about-text p,
+    .intro-text {
+        font-size: 13px;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 0.8rem;
+    }
+
+    .tech-item {
+        padding: 0.8rem;
+    }
+
+    .tech-item i,
+    .tech-item svg {
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .tech-item span {
+        font-size: 0.7rem;
+    }
