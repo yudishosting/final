@@ -72,6 +72,13 @@
       "albumArt": "/images/random/berakhirdiaku.jpeg"
     },
     {
+      "artist": "Aku Jeje",
+      "title": "Lihat Kebunku",
+      "path": "music/randomm/lihatkebunku.mp3",
+      "lyricsPath": "lyrics/randomm/lihatkebunku.js",
+      "albumArt": "/images/random/lihatkebunku.jpeg"
+    },
+    {
       "artist": "Nadhif Basalamah",
       "title": "Penjaga Hati",
       "path": "music/randomm/penjagahati.mp3",
