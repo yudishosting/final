@@ -2,6 +2,13 @@
   "playlistName": "𝗣𝗟𝗔𝗬𝗟𝗜𝗦𝗧 𝗙𝗔𝗩𝗢𝗥𝗜𝗧",
   "playlist": [
   {
+      "artist": "Nadhif Basalamah",
+      "title": "Kota ini Tak Sama Tanpamu",
+      "path": "music/randomm/kotaini.mp3",
+      "lyricsPath": "lyrics/randomm/kotaini.js",
+      "albumArt": "/images/random/kotaini.jpeg"
+    },
+  {
       "artist": "Maul Ibrahim",
       "title": "33x - Perunggu",
       "path": "music/randomm/33x.mp3",
